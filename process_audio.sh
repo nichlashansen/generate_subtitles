@@ -13,8 +13,8 @@ output_text_file="$(pwd)/output.txt"
 # Step 1: Convert the input file to the desired format
 ffmpeg -i "$input_file" -ar 16000 -ac 1 -c:a pcm_s16le "$output_file"
 
-# Step 2: Change the directory to /Users/nichlashansen/Documents/
-cd /Users/nichlashansen/Documents/whisper.cpp/
+# Step 2: Change the directory to Whisper.cpp folder
+cd /Path/to/whisper.cpp/
 
 # Step 3: Run the executable with the output file as an argument
 ./main -f "$output_file" > "$output_text_file"
