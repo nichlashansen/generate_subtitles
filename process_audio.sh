@@ -14,7 +14,7 @@ output_text_file="$(pwd)/output.txt"
 ffmpeg -i "$input_file" -ar 16000 -ac 1 -c:a pcm_s16le "$output_file"
 
 # Step 2: Change the directory to Whisper.cpp folder
-cd /Path/to/whisper.cpp/
+cd /Users/nichlashansen/Documents/whisper.cpp/ 
 
 # Step 3: Run the executable with the output file as an argument
 ./main -f "$output_file" > "$output_text_file"
@@ -35,6 +35,9 @@ function convert_txt_to_srt {
         if [[ -n "$line" && "$line" != " "* ]]; then
             local timestamp="${line%%]*}"
             local text="${line#*]   }"
+            # Remove '[' and ']' from the timestamp
+            timestamp="${timestamp//[[]/}"
+            timestamp="${timestamp//[[]/}"
             echo "$counter"
             echo "$timestamp"
             echo "$text"
@@ -50,4 +53,3 @@ convert_txt_to_srt "$output_text_file"
 cd -
 
 echo "Output text saved to $output_text_file and converted to SRT."
-
