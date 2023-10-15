@@ -1,0 +1,5 @@
+# Remove wav files
+.wav
+
+#remove mac files
+.DS_Store
