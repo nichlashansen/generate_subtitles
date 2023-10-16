@@ -5,7 +5,7 @@ Weirdly enough i drink a lot of coffee, and i would love you forever if you gave
 
 [![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png 'buy me a coffee')](https://www.buymeacoffee.com/techwithnich)
 
-##How to use this
+## How to use this
 
 To use the bash script, it's important you already installed:
 - [Git](https://git-scm.com/)
